@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Join TD</title>
+        <style>
+            body{
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                width: 100vw;
+                height: 100vh;
+            }
+            *{
+                padding:0;
+                margin:0;
+            }
+            button{
+                padding: .5rem 1rem;
+                font-size: 1.3rem;
+                background-color: hotpink;
+                border: 2px solid deeppink;
+                border-radius: .2rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            button:hover{
+                cursor:pointer;
+            }
+            
+            @keyframes click{
+                from{
+                    box-shadow: 0 0 .1rem .1rem hotpink;
+                    transform: scale(1);
+                    
+                }
+                to{
+                    box-shadow: 0 0 .1rem .3rem transparent,
+                0 0 .1rem .1rem hotpink;
+                transform: scale(1.02);
+                
+                
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="https://chat.whatsapp.com/GFmCPJIOFbPKZnnObazZzQ">
+            <button onclick="effect(event)">Join</button>
+        </a>
+        
+        <script>
+            function effect(e){
+                e.target.style.animation = "click .3s 0s 1";
+                
+                setTimeout(()=>{
+                    e.target.style.animation = "none";
+                }, 300);
+            }
+        </script>
+    </body>
+</html>
